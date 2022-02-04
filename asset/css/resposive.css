@@ -1,0 +1,98 @@
+@media (min-width:740px) and (max-width:1023px) {
+    .header{
+        display: none;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .header-herizonal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 26px;
+        width: 100%;
+        background: #000000;
+        color: #ffffff;
+    }
+    .wrapper{
+        margin-top: 100px;
+    }
+    
+    .product-card{
+        width: 50%;
+    }
+    .nav-close{
+        position: absolute;
+        top: 8px;
+        right: 23px;
+        padding: 4px 8px;
+        display: block;
+    }
+    .nav {
+        font-size: 27px;
+        overflow: auto;
+        position: fixed;
+        width: 24%;
+        height: 615px;
+        background: #ffffff;
+        z-index: 99;
+        left: 0;
+        width: 257px;
+        height: 100%;
+        margin-left: 0;
+
+    }
+}
+@media (max-width:740px) {
+    .header{
+        display: none;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .header-herizonal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 26px;
+        width: 100%;
+        background: #000000;
+        color: #ffffff;
+    }
+    .wrapper{
+        margin-top: 100px;
+    }
+    
+    .product-card{
+        width: 50%;
+    }
+    .nav-close{
+        position: absolute;
+        top: 8px;
+        right: 23px;
+        padding: 4px 8px;
+        display: block;
+    }
+    .nav {
+        font-size: 27px;
+        overflow: auto;
+        position: fixed;
+        width: 24%;
+        height: 615px;
+        background: #ffffff;
+        z-index: 99;
+        left: 0;
+        width: 257px;
+        height: 100%;
+        margin-left: 0;
+
+    }
+}

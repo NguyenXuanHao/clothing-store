@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 <body>
+    <div class="overlay">
+    </div>
     <div class="container">
             <header class="header">
                 <nav class="nav">
+                    <i class="fas fa-times nav-close" style="display: none;"></i>
                     <h3 class="nav-logo">LOGO</h3>
                     <div class="nav-product">
                         <a href="" class="nav-product-link carda">Shirts</a>
@@ -34,12 +37,10 @@
                         <a href="" class="category-link">Contact</a>
                         <a href="" class="category-link">Newsletter</a>
                         <a href="" class="category-link">Subscribes</a>
-                        
                     </div>
                 </nav>
             </header>
-                
-        <div class="wrapper">
+        <div class="wrapper">   
             <div class="header-product">
                 <h4 class="header-product-heading">Jeans</h4>
                 <div class="shoping">
@@ -174,7 +175,50 @@
                 </div>
             </div>
         </div>
+        <div class="header-herizonal">
+            <div class="header-herizonal-header">
+                LOGO
+            </div>
+            <div class="header-herizonal-icon">
+                <i class="fas fa-bars header-herizonal-icon-item"></i>
+            </div>
+        </div>
     </div>
     
+    <script>
+
+        const overlay = document.querySelector(".overlay")
+        const navClose = document.querySelector(".nav-close")
+        const header = document.querySelector(".header")
+        const iconMenu = document.querySelector(".header-herizonal-icon-item")
+        const clickClose = document.querySelector(".right-custom")
+        const navLinkOpen =document.querySelector(".nav-product-list")
+        const navLink =document.querySelectorAll(".nav-product-link")[0]
+        navLink.addEventListener("click",function(e){
+            e.preventDefault()
+            navLinkOpen.classList.add("open")
+            navLinkOpen.classList.remove("open")    
+        })
+        iconMenu.addEventListener("click",function(){
+            overlay.classList.add("open")
+            header.classList.add("open")
+            navClose.classList.add("open")
+        })
+        clickClose.addEventListener("click",function(e){
+            navLinkOpen.classList.remove("open")
+        })
+        navClose.addEventListener("click",function(e){
+            header.classList.remove("open")
+                overlay.classList.remove("open")
+        })
+        for(var i=0;i<overlay.length;i++){
+            const over = overlay[i]
+            over.addEventListener("click",function(e){
+                header.classList.remove("open")
+                overlay.classList.remove("open")
+                e.stopPropagation()
+            })
+        }
+    </script>
 </body>
 </html>
